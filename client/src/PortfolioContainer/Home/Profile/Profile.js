@@ -31,7 +31,7 @@ export default function Profile() {
                             {" "}
                             <TypeWriter
                                 options={{
-                                    strings: ['JS','C#','PHP','MySQL'],
+                                    strings: ['JS','C#','PHP','SQL'],
                                     autoStart: true,
                                     loop: true,
                                     deleteSpeed: 50
@@ -44,10 +44,7 @@ export default function Profile() {
                     </span>
                 </div>
                 <div className='profile-options'>
-                    <button className='btn primary-btn'>
-                        {" "}
-                        Embauchez-moi{" "}
-                    </button>
+                    <button className='btn primary-btn'>Embauchez-moi</button>
                     <a href='cv.pdf'>
                         <button className='btn highlighted-btn'>Mon CV</button>
                     </a>
@@ -55,9 +52,7 @@ export default function Profile() {
                 
             </div>
             <div className='profile-picture'>
-                <div className='profile-picture-background'> 
-                
-                </div>
+                <div className='profile-picture-background'></div>
             </div>     
         </div>
     </div>
