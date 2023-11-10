@@ -12,13 +12,13 @@ export default class ScrollService{
     }
 
     scrollToHireMe = () => {
-        let contactMeScreen = document.getElementById("Contact Me")
+        let contactMeScreen = document.getElementById("ContactMe")
         if(!contactMeScreen) return;
         contactMeScreen.scrollIntoView({behavior: "smooth"})
     }
 
     scrollToHome = () => {
-        let homeScreen = document.getElementById("Contact Me")
+        let homeScreen = document.getElementById("ContactMe")
         if(!homeScreen) return;
         homeScreen.scrollIntoView({behavior: "smooth"})
     }

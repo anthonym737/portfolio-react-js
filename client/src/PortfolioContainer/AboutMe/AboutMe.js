@@ -7,12 +7,12 @@ import './AboutMe.css'
 
 export default function AboutMe(props) {
   let fadeInScreenHandler = (screen)=>{
-    if(screen.fadeScreen !== props.id)
+    if(screen.fadeInScreen !== props.id)
     return
     Animations.animations.fadeInScreen(props.id)
   }
   const fadeInSubscription = 
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler)
+    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
     const SCREEN_CONSTANTS = {
       description: "Ayant obtenu mon SIO Options SLAM au Campus de la Chataigneraie, je suis un développeur spécialisé dans le framework React. Je suis à le recherche d'un poste de développeur informatique",
@@ -38,7 +38,7 @@ export default function AboutMe(props) {
       )
     }
   return (
-    <div className='about-me-container screen-container' id={props.id || ""}>
+    <div className='about-me-container screen-container fade-in' id={props.id || ""}>
       <div className='about-me-parent'>
         <ScreenHeading 
           title={'A propos de moi'}
@@ -55,7 +55,12 @@ export default function AboutMe(props) {
               {renderHightlights()}
             </div>
             <div className='about-me-options'>
-              <button className='btn primary-btn'>Embauchez-moi</button>
+              <button 
+                className='btn primary-btn'
+                onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+              >
+                Embauchez-moi
+                </button>
               <a href='cv.pdf'>
                 <button className='btn highlighted-btn'>Mon CV</button>
               </a>
