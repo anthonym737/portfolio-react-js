@@ -12,6 +12,8 @@ app.use(cors());
 
 app.use("/",contactRoute);
 
+
+//Dployment
 if(process.env.NODE_ENV === "production"){
     app.use(express.static("client/build"));
     app.get("*",(req,res)=>
