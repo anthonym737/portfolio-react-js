@@ -5,7 +5,10 @@
 // import ScreenHeading from '../../utilities/ScreenHeading/ScreenHeading';
 // import ScrollService from '../../utilities/ScrollService';
 // import Animations from '../../utilities/Animations';
-// import './Testimonial.css'
+// import lady from '../../../src/img/Testimonial/lady.png'
+// import mike from '../../../src/img/Testimonial/mike.png'
+// import man from '../../../src/img/Testimonial/man.png'
+// import shape from '../../../src/img/Testimonial/shape-bg.png'
 // import shape from '../../assets/Testimonial/shape-bg.png'
 
 // export default function Testimonial(props) {
@@ -82,7 +85,7 @@
 //                                     </div>
 //                                     <div className='client-info'>
 //                                         <img 
-//                                             src="img/testimonial/lady.png" 
+//                                             src={lady}
 //                                             alt='no internet connection'
 //                                         ></img>
 //                                         <h5>Mylène Leboursier</h5>
@@ -119,7 +122,7 @@
 //                                     </div>
 //                                     <div className='client-info'>
 //                                         <img 
-//                                             src="img/testimonial/mike.png" 
+//                                             src={mike} 
 //                                             alt='no internet connection'
 //                                         ></img>
 //                                         <h5>Michel Flantri</h5>
@@ -156,7 +159,7 @@
 //                                     </div>
 //                                     <div className='client-info'>
 //                                         <img 
-//                                             src="img/testimonial/man.png" 
+//                                             src={man} 
 //                                             alt='no internet connection'
 //                                         ></img>
 //                                         <h5>Paul Rouneau</h5>
@@ -164,9 +167,6 @@
 //                                     </div>
 //                                 </div>
 //                             </div>
-
-                            
-
 //                         </OwlCarousel>
 //                     </div>
 //                 </div>

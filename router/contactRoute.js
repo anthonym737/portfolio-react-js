@@ -16,8 +16,7 @@ router.post('/contact',(req,res)=>{
             pass:process.env.EMAIL_PASS
         }
     })
-    console.log("EMAIL_USER:", process.env.EMAIL_USER);
-    console.log("EMAIL_PASS:", process.env.EMAIL_PASS);
+
     let mailOptions = {
         from:data.email,
         to:'anthonymorand737@gmail.com',
@@ -36,7 +35,7 @@ router.post('/contact',(req,res)=>{
     smtpTransporter.sendMail(mailOptions,(error)=>{
         try {
             if(error) return res.status(400).json({msg: 'Veuillez remplir tous les champs'})
-            res.status(200).json({msg: "Merci de m'aovir contacté"})
+            res.status(200).json({msg: "Merci de m'avoir contacté"})
         } catch (error) {
             if(error) return res.status(500).json({msg: "Erreur serveur"})
         }
