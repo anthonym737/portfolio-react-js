@@ -67,6 +67,9 @@ export default function AboutMe(props) {
             </div>
           </div>
         </div>
+        <div className='about-me-card-2'>
+          <div className='about-me-diplome'></div>
+        </div>
       </div>
     </div>
   )
