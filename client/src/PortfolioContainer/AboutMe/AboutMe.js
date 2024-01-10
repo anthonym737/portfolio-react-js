@@ -3,6 +3,8 @@ import ScreenHeading from '../../utilities/ScreenHeading/ScreenHeading'
 import ScrollService from '../../utilities/ScrollService'
 import Animations from '../../utilities/Animations'
 import './AboutMe.css'
+import cv from '../../assets/amo_cv.pdf';
+
 
 
 export default function AboutMe(props) {
@@ -61,9 +63,9 @@ export default function AboutMe(props) {
               >
                 Embauchez-moi
                 </button>
-              <a href='cv.pdf'>
-                <button className='btn highlighted-btn'>Mon CV</button>
-              </a>
+                <a href={cv} download='amo_cv.pdf' target='_blank' rel='noopener noreferrer'>
+                  <button className='btn highlighted-btn'>Mon CV</button>
+                </a>
             </div>
           </div>
         </div>

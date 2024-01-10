@@ -2,6 +2,8 @@ import React from 'react'
 import TypeWriter from 'typewriter-effect'
 import ScrollService from '../../../utilities/ScrollService'
 import './Profile.css'
+import cv from '../../../assets/amo_cv.pdf';
+
 
 export default function Profile() {
   return (
@@ -51,7 +53,7 @@ export default function Profile() {
                     >
                         Embauchez-moi
                     </button>
-                    <a href='cv.pdf'>
+                    <a href={cv} download='amo_cv.pdf' target='_blank' rel='noopener noreferrer'>
                         <button className='btn highlighted-btn'>Mon CV</button>
                     </a>
                 </div>
