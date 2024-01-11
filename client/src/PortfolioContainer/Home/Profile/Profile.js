@@ -53,7 +53,7 @@ export default function Profile() {
                     >
                         Embauchez-moi
                     </button>
-                    <a href={cv} download='amo_cv.pdf' target='_blank' rel='noopener noreferrer'>
+                    <a href={cv} download='amo_cv.pdf'>
                         <button className='btn highlighted-btn'>Mon CV</button>
                     </a>
                 </div>
