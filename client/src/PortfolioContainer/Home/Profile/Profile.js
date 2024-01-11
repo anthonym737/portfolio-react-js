@@ -2,7 +2,7 @@ import React from 'react'
 import TypeWriter from 'typewriter-effect'
 import ScrollService from '../../../utilities/ScrollService'
 import './Profile.css'
-import cv from '../../../../public/amo_cv.pdf';
+import cv from '../../../assets/amo_cv.pdf';
 
 
 export default function Profile() {

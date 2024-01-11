@@ -3,7 +3,7 @@ import ScreenHeading from '../../utilities/ScreenHeading/ScreenHeading'
 import ScrollService from '../../utilities/ScrollService'
 import Animations from '../../utilities/Animations'
 import './AboutMe.css'
-import cv from '../../../public/amo_cv.pdf';
+import cv from '../../assets/amo_cv.pdf';
 
 
 
