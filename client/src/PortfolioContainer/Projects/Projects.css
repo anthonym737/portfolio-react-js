@@ -1,0 +1,53 @@
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes */
+    gap: 20px; /* Espacement entre les éléments */
+    width: 100%;
+    max-width: 1200px; /* Limite la largeur pour les grands écrans */
+    margin-top: 20px;
+  }
+  
+  .project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ffffff;
+  }
+  
+  .project-item img {
+    width: 100%; /* Assure-toi que les images sont responsives */
+    height: auto;
+    display: block; /* Élimine l'espace en dessous de l'image */
+  }
+  
+  .project-title {
+    padding: 15px;
+    background-color: #f2f2f2; /* Un fond légèrement différent pour le titre */
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Pour les écrans plus petits, nous réduisons le nombre de colonnes */
+  @media (max-width: 1024px) {
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .project-grid {
+      grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
+    }
+  }
+  
