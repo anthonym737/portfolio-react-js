@@ -41,7 +41,7 @@ export default function ProjectDetail() {
 
     return (
         <div className='project-detail-container'>
-            <h1>{projectDetails ? projectDetails.pf_title : "Chargement du titre"}</h1>
+            <h1>{projectDetails ? projectDetails.pf_title : "Title loading..."}</h1>
         </div>
   )
 }
