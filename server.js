@@ -31,6 +31,21 @@ app.get('/api/projects', (req, res) => {
     });
 });
 
+//route to get a single project by ID
+app.get('/api/projects/:id', (req, res) => {
+    const projectId = req.params.id;
+    console.log("Requested project ID:", projectId);
+    db.query('SELECT * FROM projects WHERE pf_id = ?', [projectId], (err, results) => {
+        if (err) {
+            return res.status(500).send(err);
+        }
+        //If no project found with ID, return error 404
+        if(results.length === 0) {
+            return res.status(404).send('Project not found');
+        }
+        res.status(200).json(results[0]);
+    });
+});
 
 //Deployment
 if(process.env.NODE_ENV === "production"){
