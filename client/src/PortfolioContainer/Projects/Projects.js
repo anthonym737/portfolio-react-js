@@ -4,6 +4,7 @@ import ScrollService from '../../utilities/ScrollService';
 import Animations from '../../utilities/Animations';
 import './Projects.css';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function Projects(props) {
     const [projects, setProjects] = useState([]);
@@ -20,14 +21,14 @@ export default function Projects(props) {
     useEffect(() => {
         axios.get('http://localhost:5000/api/projects')
             .then(response => {
-                console.log(response.data);
+                console.log("Project data:", response.data);
                 setProjects(response.data);
             })
             .catch(error => {
                 console.error("There is a problem with axios request", error)
             });
     }, []) 
-
+    console.log("Projects array", projects);
     return (
         <div className='projects-container fade-in' id={props.id || ""}>
             <ScreenHeading 
@@ -36,13 +37,14 @@ export default function Projects(props) {
             />
             <div className='project-grid'>
                 {projects.map(project => (
-                    <div key={project.id} className='project-item'>
+                    <Link to={`/projects/${project.pf_id}`} key={project.pf_id} className='project-item'>
                         <img src={`/images/Projects/${project.folder_name}/${project.pf_image_url}`}/>
                         <div className='project-title'>{project.pf_title}</div>
-                    </div>
+                    </Link>
                 ))} 
             </div>
             
         </div>
     )
 }
+
