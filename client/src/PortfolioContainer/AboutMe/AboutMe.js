@@ -17,7 +17,7 @@ export default function AboutMe(props) {
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
     const SCREEN_CONSTANTS = {
-      description: "Ayant obtenu mon SIO Options SLAM au Campus de la Chataigneraie, je suis un développeur spécialisé dans le framework React. Je suis à le recherche d'un poste de développeur informatique",
+      description: "Ayant obtenu mon SI Options SLAM au Campus de la Chataigneraie, je suis un développeur spécialisé dans le framework React. Je suis à le recherche d'un poste de développeur informatique",
       hightlights:{
         bullets:[
           "Développement Front et Back",
